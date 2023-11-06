@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide the scrollbar track (if you want to hide it) */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  .bg-g-white{
+    background: linear-gradient(0deg, rgba(255,255,255,0.6186646533613445) 2%, rgba(255,255,255,0.5738467261904762) 70%);
+  }
+  
+  /* Customize scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: none; /* Color of the thumb */
+  }
+  
+  /* Customize scrollbar track (if you want to show it) */
+  ::-webkit-scrollbar-track {
+    background: none; /* Color of the track */
+  }
+  
+  /* Customize scrollbar width (optional) */
+  ::-webkit-scrollbar {
+    width: none;
+    height: none;
+  }
+.ant-tabs .ant-tabs-tab {
+    font-size: 20px !important;
+    color: white;
+    font-weight: 600;
+  }
+
+  :where(.css-dev-only-do-not-override-xu9wm8).ant-drawer-left>.ant-drawer-content-wrapper{
+    box-shadow: none
+  }
+
+  .toggle-checkbox:checked {
+    @apply: right-0 border-green-400;
+    right: 0;
+    border-color: white;
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply: bg-green-400;
+
+  }
+  
+
+.bg-g-blue{
+  background: radial-gradient(circle, rgba(59,41,102,1) 0%, rgba(10,11,53,1) 24%, rgba(10,11,53,1) 97%);
+}
+
+
+:root {
+  --color-bg1: #121468;
+  --color-bg2: #0A0B35;
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color6: 18, 20, 104;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+}
+.g1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color1), 0.2) 0, rgba(var(--color1), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+ 
+  top:0% ;
+
+
+
+  
+}
+.g2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.2) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  top:13%;
+ 
+
+  
+}
+.g3 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color3), 0.2) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  top: 0;
+ 
+
+
+}
+
+.g4 {
+  position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color6), 0.2) 0, rgba(var(--color6), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    top: 0;
+
+}
+ 
+#customCheckbox:checked + label > div {
+  border-color: #3335D7; /* Change the checkbox border color */
+  background-color: #3335D7; /* Change the checkbox background color */
+}
+#customCheckbox:checked + label > div > svg {
+  fill: white; /* Change the checkmark color when checked */
+}
+@keyframes animate-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
