@@ -48,7 +48,7 @@ const DropDown = ({ array, text, icon, onLinkClick, textSize = 'font-semibold mt
               <div key={index}>
                 <HeadingH5 className="mb-3" title={array.Category} />
                 {array.items.map((items, index) => (
-                  <div onClick={onLinkClick}>
+                  <div onClick={onLinkClick} key={index}>
                     <Link className='' href={items.href} onClick={() => setIsOpen(!isOpen)} key={index}>
                       <div className="flex gap-3 md:gap-5 justify-between items-center rounded-md hover:bg-primary-blue100 hover:text-white px-2 py-2">
                         {items.title}

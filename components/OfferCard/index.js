@@ -13,7 +13,7 @@ const OfferCard = () => {
     <>
       <div className='grid  grid-cols-1  lg:grid-cols-3 gap-10 pt-10 mx-auto '>
       {  Offerdata.map((array , index)=>(
-        <div className='  shadow-xl rounded-lg p-3 border-4'>
+        <div className='  shadow-xl rounded-lg p-3 border-4' key={index}>
         <div class="cursor-pointer" >
           <Image className='rounded-t-lg h-[300px] ' src={array.image}/>
           <div class="h-auto   bg-primary-blue300 hover:bg-primary-blue400 space-y-4 p-3 sticky bottom-0 text-white bg-opacity-95 shadow-md rounded-b-md ">

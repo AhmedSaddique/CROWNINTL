@@ -20,7 +20,7 @@ const Form = () => {
                     <Para14 title={"Do you want to know more or contact our sales department?"} />
                     {
                         Contactdata.map((array, index) => (
-                            <div>
+                            <div key={index}>
                                 <div className='flex hover:scale-105 duration-300 transition'>
                                     <div className='w-1/12'>
                                         {array.icon}

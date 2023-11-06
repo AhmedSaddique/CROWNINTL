@@ -21,7 +21,7 @@ const Team = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 
   {AboutTeam.map((array, index) => (
-  <div className="max-w-sm rounded overflow-hidden  shadow-lg relative">
+  <div className="max-w-sm rounded overflow-hidden  shadow-lg relative" key={index}>
     {/* Image */}
     <div className="relative group h-auto ">
       <Image

@@ -22,7 +22,7 @@ const DeveloperTeam = () => {
   
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
   {DevTeam.map((array, index) => (
-    <div className="relative mt-20">
+    <div className="relative mt-20" key={index}>
       <div className={`rounded overflow-hidden shadow-md h-full max-h-full ${
         theme === 'dark' ? 'bg-primary-white text-primary-black' : 'bg-primary-blue100 text-primary-white '
       }`}>

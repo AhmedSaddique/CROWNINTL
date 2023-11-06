@@ -12,14 +12,14 @@ function Brand() {
           <MarqueeGroup>
             {Brandimg.map((array , index) => (
               <ImageGroup>
-                <Image src={array.image} height={150} width={150}/>
+                <Image key={index} src={array.image} height={150} width={150}/>
               </ImageGroup>
             ))}
           </MarqueeGroup>
           <MarqueeGroup>
             {Brandimg.map((array , index) => (
               <ImageGroup>
-                <Image src={array.image} height={150} width={150} />
+                <Image key={index} src={array.image} height={150} width={150} />
               </ImageGroup>
             ))}
           </MarqueeGroup>
