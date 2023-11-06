@@ -9,7 +9,7 @@ function Brand() {
     <AppContainer>
       <Wrapper>
         <Marquee>
-          <MarqueeGroup>
+          <MarqueeGroup >
             {Brandimg.map((array , index) => (
               <ImageGroup key={index}>
                 <Image src={array.image} alt={array.image} height={150} width={150}/>
@@ -65,7 +65,6 @@ const scrollX = keyframes`
 const common = css`
   display: flex;
   align-items: center;
-
   animation: ${scrollX} 30s linear infinite;
 `;
 
@@ -78,6 +77,5 @@ const ImageGroup = styled.div`
   display: grid;
   place-items: center;
   width: clamp(10rem, 1rem + 40vmin, 30rem);
-  // padding: 10px;
 `;
 

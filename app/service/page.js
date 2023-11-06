@@ -5,7 +5,6 @@ import HomePlan from '@/components/HomePlan'
 import LayoutProvider from '@/components/LayoutProvider'
 import Offer from '@/components/SeriveOffer'
 import Hero from '@/components/ServiceHero'
-import Testimonial from '@/components/Testimonial'
 import React from 'react'
 
 const Service = () => {

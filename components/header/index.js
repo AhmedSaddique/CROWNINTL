@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../Logo';
 import Container from '../Container';
 import Navlink from '../Navlink';
@@ -16,10 +16,15 @@ import Button from '../Button';
 import TabsComponent from '../tabsComponent';
 import { ImCross } from 'react-icons/im';
 
+
 const Header = ({ className }) => {
-  const [navbar, setNavbar] = useState(true);
+
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState('left');
+  const { theme, setTheme } = useTheme();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrollingUp, setScrollingUp] = useState(true);
+  
 
   const showDrawer = () => {
     setOpen(true);
@@ -31,8 +36,7 @@ const Header = ({ className }) => {
   const onChange = (e) => {
     setPlacement(e.target.value);
   };
-  const { theme, setTheme } = useTheme();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -60,20 +64,42 @@ const Header = ({ className }) => {
       children: <TabsComponent />,
     },
   ];
-
   const handleCloseDrawer = () => {
-    onClose(); // Call the onClose function provided as a prop
+    onClose();
   };
+  const handleScroll = () => {
+    if (window.scrollY < 200) {
+      setScrollingUp(true);
+    } else {
+      setScrollingUp(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
-    {
-    navbar ? (
-     <nav
-      className={`${theme === 'dark' ? 'bg-primary-light text-primary-black' : 'bg-primary-blue500 text-primary-white'
-        }   relative z-20 shadow-xl drop-shadow `}
-        >
-      <Container className="flex justify-end ">
-        
+  
+  <nav
+        className={`${
+          theme === 'dark'
+            ? 'bg-primary-light text-primary-black'
+            : 'bg-primary-blue500 text-primary-white'
+        } sticky top-0  z-20 shadow-xl drop-shadow ${scrollingUp ? 'show' : 'hide'}`}
+      >
+      <Container className="flex justify-between ">
+      <div className='flex items-center gap-4 p-2'>
+            <p className='font-medium'>
+            info@crownintltechnology.com
+            </p>
+            <p className='font-medium'>
+             +92 328 0143786
+            </p>
+        </div>
         <div className='flex items-center gap-4 p-2'>
             <Link className='font-medium' href="/login">
               Free Trial
@@ -143,13 +169,7 @@ const Header = ({ className }) => {
         </div>
       </Container>
     </nav>
-     ) :
-    (
-    <div className='z-30 absolute'>
-    <h1 className={'text-white'} >sadasds</h1>
-    </div>
-     )
-    } 
+     
     
     
     </>

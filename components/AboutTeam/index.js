@@ -22,12 +22,11 @@ const Team = () => {
 
   {AboutTeam.map((array, index) => (
   <div className="max-w-sm rounded overflow-hidden  shadow-lg relative" key={index}>
-    {/* Image */}
     <div className="relative group h-auto ">
       <Image
         className="w-full h-[380px]"
         src={array.image}
-        alt="Image Alt Text"
+        alt={array.image}
       />
       <div className="absolute top-0 left-0 w-full h-[full]  flex flex-col  opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-2xl">
         <div className="px-6 py-4  text-center flex flex-col justify-between  h-[380px] duration-300 bg-opacity-20 ">
