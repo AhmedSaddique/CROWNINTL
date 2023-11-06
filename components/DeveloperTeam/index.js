@@ -27,7 +27,7 @@ const DeveloperTeam = () => {
         theme === 'dark' ? 'bg-primary-white text-primary-black' : 'bg-primary-blue100 text-primary-white '
       }`}>
         <div className="absolute -mt-20 w-full flex justify-center">
-          <div className="h-32 w-32 border-8 border-white rounded-full">
+          <div className={`h-36 w-36 border-4  rounded-full ${theme === 'dark' ? 'border-white' : 'border-primary-blue200'}`}>
             <Image src={array.image} alt={array.image} role="img" className="rounded-full object-cover h-full w-full shadow-md" />
           </div>
         </div>

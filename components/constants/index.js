@@ -2,11 +2,6 @@
 import icon2 from "../../public/assets/images/icon2.png";
 import testimg from "../../public/assets/images/testimg.png";
 import blogimg from "../../public/assets/images/blogimg.png";
-import about1 from "../../public/assets/images/about1.png";
-import about2 from "../../public/assets/images/about2.png";
-import about3 from "../../public/assets/images/about3.png";
-import about4 from "../../public/assets/images/about4.png";
-import about5 from "../../public/assets/images/about5.png";
 import gmail from "../../public/assets/images/gmail.svg";
 import discord from "../../public/assets/images/discord.svg";
 import slack from "../../public/assets/images/slack.svg";
@@ -29,12 +24,17 @@ import facebook from '../../public/assets/images/facebook.svg';
 import disney from '../../public/assets/images/disney.svg';
 import apple from '../../public/assets/images/apple.svg';
 import airbnb from '../../public/assets/images/airbnb.svg';
-
-
-
-
 import { BiSolidBookOpen, BiSolidPhoneCall, BiSupport } from "react-icons/bi";
 import { FaAddressCard, FaPersonShelter, FaServicestack } from "react-icons/fa6";
+import { SiSocialblade } from "react-icons/si";
+import { AiOutlineGlobal, AiOutlineProject } from "react-icons/ai";
+import { FcConferenceCall} from "react-icons/fc";
+import { PiPersonArmsSpreadBold} from "react-icons/pi";
+
+
+
+
+
 
 export const Brandimg = [
   { id: "1", image:spark },
@@ -255,7 +255,7 @@ export const Blogdata = [
 export const Aboutchallenge = [
   {
     id: "1",
-    image: about1,
+    icon:<SiSocialblade size={40}/>,
     link: "Social followers",
     start: "0",
     end: "200",
@@ -263,7 +263,7 @@ export const Aboutchallenge = [
   },
   {
     id: "2",
-    image: about2,
+    icon: <PiPersonArmsSpreadBold size={40}/>,
     link: "Happy Clients",
     start: "0",
     end: "300",
@@ -271,7 +271,7 @@ export const Aboutchallenge = [
   },
   {
     id: "3",
-    image: about3,
+    icon: <AiOutlineProject size={40}/>,
     link: "Project Done",
     start: "0",
     end: "400",
@@ -279,7 +279,7 @@ export const Aboutchallenge = [
   },
   {
     id: "4",
-    image: about4,
+    icon: <AiOutlineGlobal size={40}/>,
     link: "Global branch",
     start: "0",
     end: "500",
@@ -287,7 +287,7 @@ export const Aboutchallenge = [
   },
   {
     id: "5",
-    image: about5,
+    icon: <FcConferenceCall size={40}/>,
     link: "Conference",
     start: "0",
     end: "600",
@@ -311,7 +311,7 @@ export const Aboutcore = {
         { id: "5", role: "Remix JS" },
         { id: "6", role: "Angular" },
       ],
-      ref: "/",
+      ref: "/service",
     },
     {
       id: "2",

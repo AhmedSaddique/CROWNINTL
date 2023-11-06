@@ -2,10 +2,8 @@ import Link from 'next/link'
 import React, { useState} from 'react';
 import { HeadingH4, HeadingH5, HeadingH6 } from '../Heading'
 import { Para12, Para14 } from '../Paragraph'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { Aboutcore } from '../constants';
 import Image from 'next/image';
-import AboutCore from '../AboutCore';
 
 const MegaData = ({onLinkClick}) => {
 

@@ -27,7 +27,7 @@ const Hero = () => {
     Aboutchallenge.map((array , index)=>(
     <div className='mt-5 mb-5 hover:scale-105 duration-300 transition' key={index}>
     <div className='w-3/12 h-14 mx-auto rounded-md bg-primary-gray200 p-3'>
-    <Image className='mx-auto   ' src={array.image} alt={array.image} />
+      {array.icon}
     </div>
     <HeadingH1 className={"text-center"} title={<Counter start={array.start} end={array.end} duration={array.duration}/>}/>
     <Para18 className={"text-center"} title={array.link}/>

@@ -2,29 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Hide the scrollbar track (if you want to hide it) */
 ::-webkit-scrollbar {
-    width: 0px;
+  background: white; 
+    width: 5px;
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #3335D7; 
+    border-radius: 5px;
+
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: white; 
+    border-radius: 5px;
+
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
   }
   .bg-g-white{
     background: linear-gradient(0deg, rgba(255,255,255,0.6186646533613445) 2%, rgba(255,255,255,0.5738467261904762) 70%);
   }
   
-  /* Customize scrollbar thumb */
-  ::-webkit-scrollbar-thumb {
-    background-color: none; /* Color of the thumb */
-  }
-  
-  /* Customize scrollbar track (if you want to show it) */
-  ::-webkit-scrollbar-track {
-    background: none; /* Color of the track */
-  }
-  
-  /* Customize scrollbar width (optional) */
-  ::-webkit-scrollbar {
-    width: none;
-    height: none;
-  }
 .ant-tabs .ant-tabs-tab {
     font-size: 20px !important;
     color: white;
@@ -32,7 +35,7 @@
   }
 
   :where(.css-dev-only-do-not-override-xu9wm8).ant-drawer-left>.ant-drawer-content-wrapper{
-    box-shadow: none
+    box-shadow: none !important;
   }
 
   .toggle-checkbox:checked {
@@ -45,6 +48,9 @@
 
   }
   
+  :where(.css-dev-only-do-not-override-xu9wm8).ant-drawer-left>.ant-drawer-content-wrapper{
+    box-shadow: none !important;
+  }
 
 .bg-g-blue{
   background: radial-gradient(circle, rgba(59,41,102,1) 0%, rgba(10,11,53,1) 24%, rgba(10,11,53,1) 97%);

@@ -6,12 +6,14 @@ import { BiRightArrowAlt } from 'react-icons/bi'
 import { Para16 } from '../Paragraph'
 import Image from 'next/image'
 import teamhero1 from '../../public/assets/images/teamhero1.png'
-import teamhero2 from '../../public/assets/images/teamhero2.png'
+import teamhero2 from '../../public/assets/images/teamhero2.jpg'
 import teamhero3 from '../../public/assets/images/teamhero3.png'
-import teamhero4 from '../../public/assets/images/teamhero4.png'
-import teamhero5 from '../../public/assets/images/teamhero5.png'
+import aboutm1 from '../../public/assets/images/aboutm1.jpg'
+import teamhero5 from '../../public/assets/images/teamhero5.jpg'
 import teamhero6 from '../../public/assets/images/teamhero6.png'
+
 import arrowDown from '../../public/assets/images/arrowDown.png'
+
 import { useTheme } from 'next-themes'
 
 
@@ -51,9 +53,9 @@ const TeamHero = () => {
         </div>
         <div className='space-y-5'>
         <div className='border-4 border-primary-gray300 h-auto  flex items-center justify-end'>
-          <Image src={teamhero4} alt='teamhero4' className='relative rounded-md top-3 right-2' />
+          <Image src={aboutm1} alt='teamhero4' className='relative rounded-md top-3 right-2' />
         </div>
-          <Image className='rounded-md' src={teamhero5} alt='teamhero5'/>
+          <Image className='rounded-md' src={teamhero5} alt='aboutm1'/>
           <Image className='rounded-md' src={teamhero6} alt='teamhero6'/>
         </div>
         </div>

@@ -6,7 +6,7 @@ import Navlink from '../Navlink';
 import { IoIosArrowUp } from 'react-icons/io';
 import { TbMenu2 } from 'react-icons/tb';
 import { AiOutlineSearch } from 'react-icons/ai';
-import {HiOutlineBars3BottomRight} from 'react-icons/hi2';
+import {HiOutlineBars3BottomRight, HiOutlineDevicePhoneMobile} from 'react-icons/hi2';
 import DropDown from '../dropdown';
 import ThemeToggle from '../toggletheme';
 import { useTheme } from 'next-themes';
@@ -15,6 +15,7 @@ import { Drawer, Tabs } from 'antd';
 import Button from '../Button';
 import TabsComponent from '../tabsComponent';
 import { ImCross } from 'react-icons/im';
+import { BiLogoGmail } from 'react-icons/bi';
 
 
 const Header = ({ className }) => {
@@ -93,10 +94,12 @@ const Header = ({ className }) => {
       >
       <Container className="flex justify-between ">
       <div className='flex items-center gap-4 p-2'>
-            <p className='font-medium'>
+            <p className='font-medium flex gap-2'>
+              <BiLogoGmail size={25}/>
             info@crownintltechnology.com
             </p>
-            <p className='font-medium'>
+            <p className='font-medium flex gap-2'>
+              <HiOutlineDevicePhoneMobile size={25}/>
              +92 328 0143786
             </p>
         </div>
@@ -131,9 +134,9 @@ const Header = ({ className }) => {
               open={open}
               onClose={onClose}
               key={placement}
-              style={{ background: "transparent", boxShadow: "0px !important", overflow: "scroll" }}
+              style={{ background: "transparent", boxShadow: "none !important", overflow: "hidden",}}
               >
-              <div className={`rounded-lg shadow-xl p-3 ${theme === 'dark' ? '  backdrop-blur-2xl' : ' backdrop-blur-2xl '
+              <div className={`rounded-lg shadow-xl  p-3 ${theme === 'dark' ? '  backdrop-blur-2xl' : ' backdrop-blur-2xl '
         }`}>
               <div className={`flex  justify-center border-2 hover:scale-105  shadow-md text-primary-white hover:shadow-lg duration-100 transition rounded-md p-2 w-10`} onClick={handleCloseDrawer}>
                   <ImCross />
@@ -170,7 +173,6 @@ const Header = ({ className }) => {
       </Container>
     </nav>
      
-    
     
     </>
   );
