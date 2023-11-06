@@ -11,15 +11,15 @@ function Brand() {
         <Marquee>
           <MarqueeGroup>
             {Brandimg.map((array , index) => (
-              <ImageGroup>
-                <Image key={index} src={array.image} height={150} width={150}/>
+              <ImageGroup key={index}>
+                <Image src={array.image} alt={array.image} height={150} width={150}/>
               </ImageGroup>
             ))}
           </MarqueeGroup>
           <MarqueeGroup>
             {Brandimg.map((array , index) => (
-              <ImageGroup>
-                <Image key={index} src={array.image} height={150} width={150} />
+              <ImageGroup key={index}>
+                <Image  src={array.image} alt={array.image} height={150} width={150} />
               </ImageGroup>
             ))}
           </MarqueeGroup>

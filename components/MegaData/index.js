@@ -39,7 +39,7 @@ const MegaData = ({onLinkClick}) => {
           <div key={index}>
           <Link className='' href={`${array.ref}`} >
             <div className="flex flex-col sm:flex-row border md:border-none mt-2 mb-10  duration-300 transition gap-3  rounded-md hover:bg-primary-blue100 hover:text-white px-2 py-2">
-              <Image className='w-[30px] h-[30px] rounded-full' src={array.image}/>
+              <Image className='w-[30px] h-[30px] rounded-full' src={array.image} alt={array.image} />
               <div>
               <HeadingH6 title={array.title}/>
               <Para12 title={array.para}/>

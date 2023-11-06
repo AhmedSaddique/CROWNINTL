@@ -47,29 +47,7 @@ const Team = () => {
   </div>
     ))}
 
-    
-  {/* {AboutTeam.map((array, index) => (
-    <div className="relative mt-20">
-      <div className={`rounded overflow-hidden shadow-md h-full max-h-full ${
-        theme === 'dark' ? 'bg-primary-white text-primary-black' : 'bg-primary-blue100 text-primary-white '
-      }`}>
-        <div className="absolute -mt-20 w-full flex justify-center">
-          <div className="h-32 w-32 border-8 border-white rounded-full">
-            <Image src={array.image} role="img" className="rounded-full object-cover h-full w-full shadow-md" />
-          </div>
-        </div>
-        <div className="px-2 mt-16 text-center">
-          <HeadingH4 className="" title={array.name} />
-          <HeadingH6 className="" title={array.title}/>
-          <Para12 className="text-center pt-3" title={array.para}/>
 
-          <div className="flex justify-center pt-8 pb-10">
-            <Iconitem className="absolute bottom-[20px] " />
-          </div>
-        </div>
-      </div>
-    </div>
-  ))} */}
 </div>
 
     </Container>

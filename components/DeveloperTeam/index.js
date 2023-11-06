@@ -28,7 +28,7 @@ const DeveloperTeam = () => {
       }`}>
         <div className="absolute -mt-20 w-full flex justify-center">
           <div className="h-32 w-32 border-8 border-white rounded-full">
-            <Image src={array.image} role="img" className="rounded-full object-cover h-full w-full shadow-md" />
+            <Image src={array.image} alt={array.image} role="img" className="rounded-full object-cover h-full w-full shadow-md" />
           </div>
         </div>
         <div className="px-2 mt-16 text-center">

@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
         </div>
         <div className='w-12/12 md:w-6/12 hidden md:block'>
-        <Image className='h-auto' src={banner1}/>
+        <Image className='h-auto' src={banner1} alt='banner1'/>
         </div>
         
       </div>

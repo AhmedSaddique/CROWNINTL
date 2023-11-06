@@ -19,7 +19,7 @@ const HomeVideo = () => {
     <div className='pt-10'>
     <div className='grid grid-cols-1 md:grid-cols-2 rounded-md shadow   space-y-10 ' >
     <div className='hidden md:flex'>
-        <Image src={imagevideo} className='rounded-l-md'  />
+        <Image src={imagevideo} alt='imagevideo' className='rounded-l-md'  />
     </div>
     <div className={` p-5 md:p-8 lg:p-10 space-y-4 relative ${theme === 'dark' ? 'text-primary-black' :
    'text-primary-white'} `}>
@@ -30,7 +30,7 @@ const HomeVideo = () => {
         <p className=' '>Crown International Technology’s aim is to empower people, businesses, and organisations throughout the world by utilising cutting-edge digital technology. We work hard to provide cutting-edge solutions that boost productivity, connection, and efficiency while promoting sustainable growth. We strive to change the digital environment, inspire technical innovation, and enable our clients to succeed in the constantly changing digital era through our knowledge, creativity, and unrelenting pursuit of excellence.</p>
         <Button className='border-none bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md  ' btnicon={<DiGoogleCloudPlatform size={25} />} text={"Learn More"}/>
         <div>
-        <Image src={finger} className='absolute bottom-0 right-0'/>
+        <Image src={finger} alt='finger' className='absolute bottom-0 right-0'/>
         </div>
     </div>
     </div>

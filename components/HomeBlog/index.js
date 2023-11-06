@@ -29,7 +29,7 @@ const Blog = () => {
           <div className={`w-9/12 flex justify-center p-3 rounded-lg bg-primary-black shadow-xl ${
                         theme === 'dark' ? 'bg-primary-white ' : 'bg-primary-blue100 '
                       }`}>
-            <Image className=' hover:scale-105 duration-500 transition rounded-md object-cover' src={array.image}/>
+            <Image className=' hover:scale-105 duration-500 transition rounded-md object-cover' src={array.image} alt={array.image} />
             </div>
           </div>
             <div className={`p-4 relative  shadow-2xl space-y-3 rounded-lg pt-10 ${

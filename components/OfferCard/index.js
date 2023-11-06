@@ -15,7 +15,7 @@ const OfferCard = () => {
       {  Offerdata.map((array , index)=>(
         <div className='  shadow-xl rounded-lg p-3 border-4' key={index}>
         <div class="cursor-pointer" >
-          <Image className='rounded-t-lg h-[300px] ' src={array.image}/>
+          <Image className='rounded-t-lg h-[300px] ' src={array.image} alt={array.image}/>
           <div class="h-auto   bg-primary-blue300 hover:bg-primary-blue400 space-y-4 p-3 sticky bottom-0 text-white bg-opacity-95 shadow-md rounded-b-md ">
             <HeadingH4 class="text-xl font-bold pb-2" title={array.heading} />
             <Para16 class="truncate text-sm" title={array.text}/>

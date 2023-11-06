@@ -57,11 +57,11 @@ const Offer = () => {
         >
             {
                 Offerdata.map((array, index)=>(
-                <SwiperSlide className='m-0 md:m-3 mb-10 w-full'>
-              <div className={`border  duration-300 transition rounded-md md:hover:scale-105`} key={index}>
+                <SwiperSlide className='m-0 md:m-3 mb-10 w-full'  key={index}>
+              <div className={`border  duration-300 transition rounded-md md:hover:scale-105`}>
                 <div className='bg-primary-gray200 flex pt-8 rounded-t-md pb-8 p-3 gap-3'>
                 <div className='bg-primary-white rounded-md p-3 min-w-[104px] max-w-[104px]  '>
-                <Image className='w-6/6 h-[80px]' src={array.image}/>
+                <Image className='w-6/6 h-[80px]' src={array.image} alt={array.image}/>
                 </div>
                 <HeadingH4 className={"text-white"} title={array.heading}/>
                 </div>

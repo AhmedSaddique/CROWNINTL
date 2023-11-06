@@ -63,7 +63,7 @@ const Testimonial = () => {
                 <div className=' bg-quote bg-no-repeat bg-right-top space-y-5 '>
                   <div className='flex gap-4'>
                     <div className='w-2/12 h-2/12'>
-                      <Image className='rounded-full ' src={array.image} />
+                      <Image className='rounded-full ' src={array.image} alt={array.image} />
                     </div>
                     <div>
                       <HeadingH5 className={"text-primary-gray300"} title={array.name} />

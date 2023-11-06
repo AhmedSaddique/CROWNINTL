@@ -20,7 +20,7 @@ const AboutCore = () => {
     <Container>
       <div className='bg-aboutfinger bg-no-repeat pt-10  bg-left-bottom '>
         <div className='w-full flex gap-4'>
-          <Image src={arrowDown} className='h-20 animate-bounce delay-1000' />
+          <Image src={arrowDown} alt='Arrow' className='h-20 animate-bounce delay-1000' />
           <div className='space-y-4 pb-10'>
             <HeadingH2 title='Technologies We Use' />
             <HeadingH2 className={"text-primary-blue100"} title=' Mostly' />
@@ -34,7 +34,7 @@ const AboutCore = () => {
             <Link key={index} href="/" className={`shadow-lg group mb-8 rounded-lg max-h-full h-auto flex justify-center items-center relative ${theme === 'dark' ? ' bg-primary-white ' : ' bg-primary-blue100 hover:bg-primary-blue200'}`}>
               <div>
                 <div className="p-4 rounded-lg group-hover:opacity-25">
-                  <Image className='rounded-full' src={array.image} />
+                  <Image className='rounded-full' src={array.image} alt={array.image} />
                   <HeadingH5 className={'pl-2'} title={array.title} />
                   <Para16 className={'pl-2'} title={array.para} />
                 </div>

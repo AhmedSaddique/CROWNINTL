@@ -16,9 +16,9 @@ const Newsletter = () => {
      <div className='bg-primary-blue400 bg-newsletter bg-no-repeat bg-right-top rounded-md'>
     <div className='flex flex-wrap md:flex-nowrap gap-5 p-4 pt-20 pb-20'>
     <div className='relative w-full md:w-6/12 '>
-    <Image className='absolute top-0 right-0 hidden md:flex  animate-bounce' src={choose1} />
-    <Image className='rounded-full' src={choosemain} />
-    <Image className='absolute bottom-0 md:bottom-10 lg:bottom-0 hidden md:flex  animate-bounce ' src={choose3} />
+    <Image className='absolute top-0 right-0 hidden md:flex  animate-bounce' src={choose1} alt='choose1' />
+    <Image className='rounded-full' src={choosemain} alt='choosemain' />
+    <Image className='absolute bottom-0 md:bottom-10 lg:bottom-0 hidden md:flex  animate-bounce ' src={choose3} alt='choose3w' />
     </div>
     <div className='md:w-6/12 text-white space-y-4 '>
         <Para18 title={"Newsletter"}/>

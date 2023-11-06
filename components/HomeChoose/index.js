@@ -20,9 +20,9 @@ const ChooseUs = ({className, flex = "md:flex",maintitle,image1,mainimage,image2
         <div className={`flex flex-wrap md:flex-nowrap gap-4 ${className} ${flex}`}>
 
           <div className='relative w-full md:w-6/12 '>
-            <Image className='absolute top-0 right-0 hidden md:flex  animate-bounce' src={image1} />
-            <Image className='rounded-full' src={mainimage} />
-            <Image className='absolute bottom-0 md:bottom-10 lg:bottom-0 hidden md:flex  animate-bounce ' src={image2} />
+            <Image className='absolute top-0 right-0 hidden md:flex  animate-bounce' src={image1} alt='image1' />
+            <Image className='rounded-full' src={mainimage} alt='mainimage' />
+            <Image className='absolute bottom-0 md:bottom-10 lg:bottom-0 hidden md:flex  animate-bounce ' src={image2} alt='image2' />
           </div>
           <div className={`space-y-3 w-full md:w-6/12 ${theme === 'dark' ? ' text-black ' : ' text-primary-white'}`}>
             <Badges  className={`${theme === 'dark' ? 'bg-primary-alertlight' :'text-primary-white'} shadow-md text-center  border-none `} title={badge} />
