@@ -38,14 +38,14 @@ const DropDown = ({ array, text, icon, onLinkClick, textSize = 'font-semibold mt
           className={`fixed ${alignment} z-20 rounded-md shadow  ${theme === 'dark' ? 'bg-primary-white text-black ' : 'bg-primary-blue400 '
             }`}
 
-          onMouseEnter={openDropdown}
-          onMouseLeave={closeDropdown}
-          ref={dropdownRef}
+         
 
         >
-          {array ? (
+          {
             array.map((array, index) => (
-              <div key={index}>
+              <div key={index}  onMouseEnter={openDropdown}
+          onMouseLeave={closeDropdown}
+          ref={dropdownRef}>
                 <HeadingH5 className="mb-3" title={array.Category} />
                 {array.items.map((items, index) => (
                   <div onClick={onLinkClick} key={index}>
@@ -62,42 +62,7 @@ const DropDown = ({ array, text, icon, onLinkClick, textSize = 'font-semibold mt
                 ))}
               </div>
             ))
-          ) : (
-            <form  className="relative border-none ">
-              <div>
-                <div className="absolute inset-y-0 flex items-center pl-3 pointer-events-none">
-                  <svg
-                    className="w-4 h-4 text-main"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                    />
-                  </svg>
-                </div>
-                <input
-                  type="search"
-                  id="default-search"
-                  className="block w-full p-4 pl-10 bg-primary-white text-black text-sm border-2 focus:outline-none rounded"
-                  placeholder="Search"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="text-light absolute right-2.5 bottom-2.5 bg-primary-blue100 text-white hover:bg-primary-gray400 transition duration-300 font-medium rounded text-sm px-4 py-2"
-                >
-                  Search
-                </button>
-              </div>
-            </form>
-          )}
+          }
         </div>
       )}
     </div>

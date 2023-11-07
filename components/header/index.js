@@ -7,7 +7,8 @@ import { IoIosArrowUp } from 'react-icons/io';
 import { TbMenu2 } from 'react-icons/tb';
 import { AiOutlineSearch } from 'react-icons/ai';
 import {HiOutlineBars3BottomRight, HiOutlineDevicePhoneMobile} from 'react-icons/hi2';
-import DropDown from '../dropdown';
+import { Modal } from 'antd';
+
 import ThemeToggle from '../toggletheme';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
@@ -82,6 +83,14 @@ const Header = ({ className }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  const [isModalOpen, setIsModalOpen] = useState([false, false]);
+  const token = useTheme();
+  const toggleModal = (idx, target) => {
+    setIsModalOpen((p) => {
+      p[idx] = target;
+      return [...p];
+    });
+  };
   return (
     <>
   
@@ -103,7 +112,7 @@ const Header = ({ className }) => {
       +92 328 0143786
     </p>
   </div>
-  <div className='flex flex-row  xs:items-center gap-4 p-2'>
+  <div className='hidden  md:flex flex-row  xs:items-center gap-4 p-2'>
     <Link className='font-normal' href="/login">
       Free Trial
     </Link>
@@ -125,7 +134,52 @@ const Header = ({ className }) => {
         <div className="flex gap-4">
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <DropDown onlick={() => setNavbar(false)}  alignment='w-full  right-0' text={<AiOutlineSearch className="text-2xl mt-[5px] " />} />
+            <Button onClick={() => toggleModal(0, true)} className={'border-none'} text={<AiOutlineSearch size={25}/>} />
+            <Modal
+              open={isModalOpen[0]}
+              onOk={() => toggleModal(0, false)}
+              onCancel={() => toggleModal(0, false)}
+              maskStyle={{ backdropFilter: 'blur(10px)' }}
+              
+              footer=""
+             
+            >
+               <form  className="relative border-none mt-6 ">
+              <div>
+                <div className="absolute inset-y-0 flex items-center  pl-3 pointer-events-none">
+                  <svg
+                    className="w-4 h-4 text-main"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  className="block w-full p-4 pl-10 bg-primary-white text-black text-sm border-2 focus:outline-none rounded"
+                  placeholder="Search"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="text-light absolute right-2.5 bottom-2.5 bg-primary-blue100 text-white hover:bg-primary-gray400 transition duration-300 font-medium rounded text-sm px-4 py-2"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+            </Modal>
+           
             
             <Button className={'border-none'} onClick={showDrawer} btnicon={<HiOutlineBars3BottomRight size={25} />} text='' />
             <Drawer
@@ -167,6 +221,14 @@ const Header = ({ className }) => {
                   <Navlink onClose={() => setMobileMenuOpen(false)} />
 
                 </div>
+                <div className='flex flex-row  xs:items-center gap-4 pt-3'>
+                <Link className='font-medium' href="/login">
+                  Free Trial
+                </Link>
+                <Link className='font-medium' href="/login">
+                  Login
+                </Link>
+              </div>
               </div>
             )}
           </div>

@@ -7,7 +7,7 @@ const page = () => {
   return (
     <LayoutProvider>
       <div className={` relative `}>
-    <div className={'relative z-10 backdrop-blur-md'}>
+    <div className={'relative z-10 backdrop-blur'}>
         <Login/>
         </div>
         </div>

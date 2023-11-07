@@ -29,9 +29,6 @@ const MegaMenu = ({ array,className, text, icon, onLinkClick, textSize = 'font-s
     { id: '2', title: 'Download / Install', content: <MegaData/> },
     { id: '3', title: 'Technology', content: <MegaData/> },
     { id: '4', title: 'Your Account', content: <MegaData/> },
-
-
-
   ];
 
   const [activeTab, setActiveTab] = useState(0);
@@ -76,7 +73,7 @@ const MegaMenu = ({ array,className, text, icon, onLinkClick, textSize = 'font-s
             }
            
           </div>
-          <div onClick={handleBothClicks}  className={`${className} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full md:w-9/12`}>
+          <div onClick={handleBothClicks}  className={`${className} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:w-9/12`}>
             {dropdata[activeTab].content}
           </div>
        

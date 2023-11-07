@@ -17,7 +17,7 @@ const Login = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <Container className={'pt-10'}>
+    <Container className={'pt-10 backdrop-blur-3xl'}>
  <div className=' max-w-lg  sm:w-4/6 mx-auto '>
         <div className='text-center p-8 space-y-4 border-2 rounded-2xl shadow-lg'>
         <HeadingH1 title={"Welcome back"}/>
