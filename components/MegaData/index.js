@@ -27,7 +27,7 @@ const MegaData = ({onLinkClick}) => {
     {
     Aboutcore.Category.map((data, index) => (
       <>
-      <div className='flex items-center p-3 '>
+      <div className='flex items-center p-3  '>
       <HeadingH4 key={index} className=" " title={data.cat ||"categ" } />
       </div>
       </>

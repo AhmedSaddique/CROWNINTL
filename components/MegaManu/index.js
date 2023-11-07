@@ -59,7 +59,7 @@ const MegaMenu = ({ array,className, text, icon, onLinkClick, textSize = 'font-s
             <ImCross />
           </div>
           <div className='flex gap-3 h-screen' >
-          <div className={` ${className}  p-2 pt-5 w-full md:w-3/12 `}>
+          <div className={` ${className}  p-2 pt-5 w-full md:w-3/12 overflow-y-scroll md:overflow-hidden `}>
             {
               dropdata.map((array , index)=>(
                 <div key={index}
@@ -73,7 +73,7 @@ const MegaMenu = ({ array,className, text, icon, onLinkClick, textSize = 'font-s
             }
            
           </div>
-          <div onClick={handleBothClicks}  className={`${className} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:w-9/12`}>
+          <div onClick={handleBothClicks}  className={`${className} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:w-9/12 overflow-y-scroll md:overflow-hidden`}>
             {dropdata[activeTab].content}
           </div>
        

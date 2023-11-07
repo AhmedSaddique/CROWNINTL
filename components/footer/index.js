@@ -1,11 +1,8 @@
 "use client"
-import Image from 'next/image'
 import React from 'react'
-import LayoutProvider from '../LayoutProvider'
 import Logo from '../Logo'
 import Iconitem from '../Icon/icon'
 import { FooterAbout, FooterResources, WeOffer } from '../constants'
-import Payment from '../../public/assets/images/PaymentMethod.png'
 import FooterDiv from '../footerdiv'
 import { useTheme } from 'next-themes'
 import Container from '../Container'

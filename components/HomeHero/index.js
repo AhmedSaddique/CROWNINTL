@@ -8,6 +8,7 @@ import { Para16 } from '../Paragraph';
 
 
 const Hero = () => {
+  
   const { theme, settheme } = useTheme();
  
   return (
