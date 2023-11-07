@@ -12,14 +12,14 @@ function Brand() {
           <MarqueeGroup >
             {Brandimg.map((array , index) => (
               <ImageGroup key={index}>
-                <Image src={array.image} alt={array.image} height={150} width={150}/>
+                <Image src={array.image} alt={array.image} height={100} width={100}/>
               </ImageGroup>
             ))}
           </MarqueeGroup>
           <MarqueeGroup>
             {Brandimg.map((array , index) => (
               <ImageGroup key={index}>
-                <Image  src={array.image} alt={array.image} height={150} width={150} />
+                <Image  src={array.image} alt={array.image} height={100} width={100} />
               </ImageGroup>
             ))}
           </MarqueeGroup>
@@ -35,6 +35,8 @@ const AppContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+
 `;
 
 const Wrapper = styled.div`

@@ -92,26 +92,27 @@ const Header = ({ className }) => {
             : 'bg-primary-blue500 text-primary-white'
         } sticky top-0  z-20 shadow-xl drop-shadow ${scrollingUp ? 'show' : 'hide'}`}
       >
-      <Container className="flex justify-between ">
-      <div className='flex items-center gap-4 p-2'>
-            <p className='font-medium flex gap-2'>
-              <BiLogoGmail size={25}/>
-            info@crownintltechnology.com
-            </p>
-            <p className='font-medium flex gap-2'>
-              <HiOutlineDevicePhoneMobile size={25}/>
-             +92 328 0143786
-            </p>
-        </div>
-        <div className='flex items-center gap-4 p-2'>
-            <Link className='font-medium' href="/login">
-              Free Trial
-            </Link>
-            <Link className='font-medium' href="/login">
-              Login
-            </Link>
-        </div>
-      </Container>
+      <Container className="flex flex-col xs:flex-row xs:justify-between xs:flex-wrap">
+    <div className='flex flex-wrap sm:flex gap-3 p-2'>
+    <p className='text-14 flex gap-2'>
+      <BiLogoGmail size={20}/>
+      info@crownintltechnology.com
+    </p>
+    <p className='text-14 flex ap-2'>
+      <HiOutlineDevicePhoneMobile size={20}/>
+      +92 328 0143786
+    </p>
+  </div>
+  <div className='flex flex-row  xs:items-center gap-4 p-2'>
+    <Link className='font-normal' href="/login">
+      Free Trial
+    </Link>
+    <Link className='font-normal' href="/login">
+      Login
+    </Link>
+  </div>
+</Container>
+
       <div className={`${theme === 'dark' ? 'border-b-primary-black' : 'border-b-primary-white'
         }  border-b-2 w-[95%] mx-auto`} />
       <Container className="flex justify-between py-4 pt-2 pb-2 ">
