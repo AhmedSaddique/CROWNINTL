@@ -1,13 +1,15 @@
 
 "use client"
-
 import Hero from '@/components/HomeHero'
-import HomeVideo from '@/components/HomeVideo'
 import LayoutProvider from '@/components/LayoutProvider'
 import Testimonial from '@/components/Testimonial'
 import AboutCore from '@/components/AboutCore'
 import Container from '@/components/Container'
 import Brand from '@/components/Brand'
+import Information from '@/components/Information'
+import imagevideo from '../public/assets/images/imgvideo.png'
+import { DiGoogleCloudPlatform } from 'react-icons/di'
+
 
 export default function Home() {
   return (
@@ -19,7 +21,16 @@ export default function Home() {
         <Hero />
          <Brand/>
          <AboutCore/>
-        <HomeVideo />
+        <Information
+          image={imagevideo}
+          badge={"Mission"}
+          title={'Our Mission'}
+          para={'Crown International Technology’s aim is to empower people, businesses, and organisations throughout the world by utilising cutting-edge digital technology. We work hard to provide cutting-edge solutions that boost productivity, connection, and efficiency while promoting sustainable growth. We strive to change the digital environment, inspire technical innovation, and enable our clients to succeed in the constantly changing digital era through our knowledge, creativity, and unrelenting pursuit of excellence.'}
+          link={`/about`}
+          starticon={<DiGoogleCloudPlatform size={25} />}
+          button={'Learn More'}
+
+        />
         <Testimonial />
         </div>
         </div>

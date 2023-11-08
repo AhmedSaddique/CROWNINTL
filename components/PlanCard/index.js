@@ -18,7 +18,7 @@ const PlanCard = (className) => {
 <div className={`mt-10 mb-10 gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 `}>
             {
                 Plandata && Plandata.map((array, index) => (
-                    <div className={`  space-y-2 shadow shadow-primary-blue100 mb-5 rounded-lg p-4 hover:scale-105 transition duration-300 ${
+                    <div className={`  space-y-2 shadow  mb-5 rounded-lg p-4 hover:scale-105 transition duration-300 ${
                         theme === 'dark' ? 'bg-primary-white text-black' : 'bg-primary-blue100 text-white'
                       } `} key={index}>
                             <div className=''>

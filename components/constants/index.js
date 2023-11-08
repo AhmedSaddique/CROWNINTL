@@ -30,6 +30,7 @@ import { SiSocialblade } from "react-icons/si";
 import { AiOutlineGlobal, AiOutlineProject } from "react-icons/ai";
 import { FcConferenceCall} from "react-icons/fc";
 import { PiPersonArmsSpreadBold} from "react-icons/pi";
+import { HiDocumentDuplicate } from "react-icons/hi2";
 
 
 
@@ -49,10 +50,10 @@ export const Brandimg = [
 ];
 
 export const FooterAbout = [
-  { id: "1", title: "Mission & Vision", href: "/" },
-  { id: "2", title: "Our Team", href: "/" },
-  { id: "3", title: "Career", href: "/" },
-  { id: "4", title: "Press & Media", href: "/" },
+  { id: "1", title: "Mission & Vision", href: "/about" },
+  { id: "2", title: "Our Team", href: "/developer" },
+  { id: "3", title: "Privacy Policy", href: "/policy" },
+  { id: "4", title: "Support", href: "/support" },
 ];
 export const FooterResources = [
   { id: "1", title: "Project Management", href: "/" },
@@ -589,3 +590,14 @@ export const policydata=[
 {id:"5" , href:"#Ownership",hrefid:"Ownership" , title:"Ownership" ,text:"Under no circumstances shall AliThemes be liable for any direct, indirect, special, incidental or consequential damages, including, but not limited to, loss of data or profit, arising out of the use, or the inability to use, the materials on this site, even if AliThemes or an authorized representative has been advised of the possibility of such damages. If your use of materials from this site results in the need for servicing, repair or correction of equipment or data, you assume any costs thereof."},
 {id:"6" , href:"#Updates",hrefid:"Updates" , title:"Updates" ,text:"Under no circumstances shall AliThemes be liable for any direct, indirect, special, incidental or consequential damages, including, but not limited to, loss of data or profit, arising out of the use, or the inability to use, the materials on this site, even if AliThemes or an authorized representative has been advised of the possibility of such damages. If your use of materials from this site results in the need for servicing, repair or correction of equipment or data, you assume any costs thereof."},
 ];
+
+export const supportdata =[
+  {id:"1" , icon:<HiDocumentDuplicate className={`hover:scale-125 duration-300 transition`} size={50} /> , title:"Customers First" , text:"Our company exists to help merchants sell more. We make every decision and measure every outcome based on how well it serves our customers."},
+  {id:"2" , icon:<HiDocumentDuplicate className={`hover:scale-125 duration-300 transition`} size={50} /> , title:"Customers First" , text:"Our company exists to help merchants sell more. We make every decision and measure every outcome based on how well it serves our customers."},
+  {id:"3" , icon:<HiDocumentDuplicate className={`hover:scale-125 duration-300 transition`} size={50} /> , title:"Customers First" , text:"Our company exists to help merchants sell more. We make every decision and measure every outcome based on how well it serves our customers."},
+  {id:"4" , icon:<HiDocumentDuplicate className={`hover:scale-125 duration-300 transition`} size={50} /> , title:"Customers First" , text:"Our company exists to help merchants sell more. We make every decision and measure every outcome based on how well it serves our customers."},
+  {id:"5" , icon:<HiDocumentDuplicate className={`hover:scale-125 duration-300 transition`} size={50} /> , title:"Customers First" , text:"Our company exists to help merchants sell more. We make every decision and measure every outcome based on how well it serves our customers."},
+  {id:"6" , icon:<HiDocumentDuplicate className={`hover:scale-125 duration-300 transition`} size={50} /> , title:"Customers First" , text:"Our company exists to help merchants sell more. We make every decision and measure every outcome based on how well it serves our customers."},
+ 
+
+]

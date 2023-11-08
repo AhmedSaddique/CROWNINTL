@@ -1,6 +1,6 @@
 "use client"
 import Hero from '@/components/AboutHero'
-import Blog from '@/components/HomeBlog'
+import Blog from '@/components/Blog'
 import ChooseUs from '@/components/HomeChoose'
 import Newsletter from '@/components/HomeNewsletter'
 import LayoutProvider from '@/components/LayoutProvider'

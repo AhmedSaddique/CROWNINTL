@@ -7,10 +7,10 @@ import { SiGnuprivacyguard } from 'react-icons/si';
 import NextLink from 'next/link'; // Rename it to NextLink
 import { AiOutlineHome } from 'react-icons/ai';
 import Container from '../Container';
-import HomePlan from '../HomePlan';
-import HomeFaq from '../HomeFaQ';
 import { MdContactSupport } from 'react-icons/md';
 import { BiSolidContact } from 'react-icons/bi';
+import Plan from '../Plan';
+import Faq from '../Faq';
 const { TabPane } = Tabs;
 
 const { Link } = Anchor;
@@ -44,7 +44,7 @@ const Hero = () => {
           </NextLink>
           <NextLink className={` ${
                 theme === 'dark' ? 'text-primary-black hover:text-primary-blue100' : 'text-primary-white hover:text-primary-blue100'
-              } flex gap-2`} href='/service'>
+              } flex gap-2`} href='/support'>
             <MdContactSupport size={20}/>
             Support
           </NextLink>
@@ -126,10 +126,10 @@ const Hero = () => {
           </div>
 
           <div id="Plan" className='mt-5'>
-              <HomePlan/>
+              <Plan/>
           </div>
           <div id="Faq" className='mt-5'>
-              <HomeFaq/>
+              <Faq/>
           </div>
         </div>
         </Container>

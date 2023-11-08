@@ -23,8 +23,7 @@ module.exports = {
       animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'bounce': 'bounce 3s linear infinite',
-        'bounceRight': 'bounce 3s linear infinite',
-
+        'bounceRight': 'bounce 3s linear infinite'
       },
       backdropFilter: {
         'none': 'none',

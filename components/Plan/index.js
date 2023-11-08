@@ -3,13 +3,12 @@ import React, { useState } from 'react'
 import Button from '../Button'
 import PlanCard from '../PlanCard'
 import { BiRightArrowAlt } from 'react-icons/bi'
-import Accordion from '../Accordion'
-import { HeadingH1, HeadingH5, HeadingH6 } from '../Heading'
+import { HeadingH1, HeadingH6 } from '../Heading'
 import { useTheme } from 'next-themes'
-import { Para14, Para16, Para18 } from '../Paragraph'
+import { Para18 } from '../Paragraph'
 
 
-const HomePlan = () => {
+const Plan = () => {
   const tabs = [
     { id: "1", Title: "monthly", content: <PlanCard /> },
     { id: "2", Title: "Yearly", content: <PlanCard /> },
@@ -64,7 +63,7 @@ const HomePlan = () => {
   )
 }
 
-export default HomePlan
+export default Plan
 
 
  {/* <div className='flex justify-center gap-2 text-white' >

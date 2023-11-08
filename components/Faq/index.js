@@ -8,7 +8,7 @@ import { HeadingH1 } from '../Heading';
 import { Para16 } from '../Paragraph';
 import { useTheme } from 'next-themes';
 
-const HomeFaq = () => {
+const Faq = () => {
   const { theme, setTheme } = useTheme();
 
   const FaqTapdata = [
@@ -69,4 +69,4 @@ const HomeFaq = () => {
   );
 };
 
-export default HomeFaq;
+export default Faq;

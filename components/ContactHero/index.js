@@ -1,7 +1,5 @@
 "use client"
 import React from 'react'
-import Image from 'next/image'
-import ContactHero from '../../public/assets/images/ConactHero.png'
 import { Para16, Para18 } from '../Paragraph'
 import { HeadingH1 } from '../Heading'
 import { useTheme } from 'next-themes'
