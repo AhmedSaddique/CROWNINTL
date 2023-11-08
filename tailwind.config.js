@@ -69,6 +69,9 @@ module.exports = {
         'homebg2' :"url('/assets/images/homebg2.png')",
         'homehero' :"url('/assets/images/homehero.png')",
         'Hero' :"url('/assets/images/Hero.png')",
+        'policyright' :"url('/assets/images/policy-right.png')",
+        'policyleft' :"url('/assets/images/policy-left.png')",
+
 
 
 
