@@ -48,8 +48,8 @@ const Topics = () => {
           >
               {
                 supportdata.map((array, index)=>(
-                    <SwiperSlide>
-              <div className="border rounded-md shadow flex gap-2 p-3 h-auto" key={index}>
+                    <SwiperSlide key={index}>
+              <div className="border rounded-md shadow flex gap-2 p-3 h-auto" >
                 <div className={`w-2/12 ${
           theme === "dark" ? "text-primary-blue100" : "text-primary-white   "
         }`}>
