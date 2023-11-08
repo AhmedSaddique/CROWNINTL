@@ -40,7 +40,7 @@ const TeamHero = () => {
         <div className='grid grid-cols-3 gap-5 '>
         <div className='space-y-5 relative'>
           <Image className='rounded-md' src={teamhero1} alt='teamhero1'/>
-          <Image className='absolute hidden md:block rounded-md animate-bounce  pt-8   right-5' src={arrowDown}/>
+          <Image className='absolute hidden md:block rounded-md animate-bounce  pt-8   right-5' src={arrowDown} alt='arrowDown'/>
         </div>
         <div className='space-y-5 '>
           <Image className='rounded-md ' src={teamhero2} alt='teamhero2'/>

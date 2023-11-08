@@ -47,7 +47,7 @@ const Privacyinfo = () => {
           >
           {policydata.map((array, index) => (
 
-         <div id={array.hrefid} className="mt-5">
+         <div id={array.hrefid} className="mt-5" key={index}>
               <HeadingH3
                 className={"text-primary-blue100"}
                 title={array.title}
