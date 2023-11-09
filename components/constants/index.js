@@ -37,6 +37,8 @@ import { HiDocumentDuplicate } from "react-icons/hi2";
 
 
 
+
+
 export const Brandimg = [
   { id: "1", image:spark },
   { id: "2", image:sass },
@@ -160,32 +162,7 @@ export const Plandata = [
   },
 ];
 
-export const Faqdata = [
-  {
-    id: "1",
-    title: "General Support",
-    descrip:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum — semper quis lectus nulla. Interactively transform magnetic growth strategies whereas prospective “outside the box” thinking.",
-  },
-  {
-    id: "2",
-    title: "Download / Install",
-    descrip:
-      "Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.",
-  },
-  {
-    id: "3",
-    title: "Technology",
-    descrip:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum — semper quis lectus nulla. Interactively transform magnetic growth strategies whereas prospective “outside the box” thinking.",
-  },
-  {
-    id: "4",
-    title: "Your Account",
-    descrip:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum — semper quis lectus nulla. Interactively transform magnetic growth strategies whereas prospective “outside the box” thinking.",
-  },
-];
+
 
 export const Testimonialdata = [
   {

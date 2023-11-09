@@ -1,29 +1,78 @@
 "use client"
 import React, { useState } from 'react';
 import Button from '../Button';
-import Accordion from '../Accordion';
 import Container from '../Container';
-import { BiRightArrowAlt } from 'react-icons/bi';
-import { HeadingH1 } from '../Heading';
+import { HeadingH1, HeadingH6 } from '../Heading';
 import { Para16 } from '../Paragraph';
 import { useTheme } from 'next-themes';
+import { Faqdata } from '../constants';
+import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md';
+import FaqImg from '../FaqImg';
+import FaqImg2 from '../FaqImg/index2';
+import fa1 from '../../public/assets/images/fa1.png'
+import fa2 from '../../public/assets/images/fa2.png'
+import { FcFaq } from 'react-icons/fc';
+
 
 const Faq = () => {
   const { theme, setTheme } = useTheme();
 
-  const FaqTapdata = [
-    { id: '1', title: 'General Support', content: <Accordion/> },
-    { id: '2', title: 'Download / Install', content: <Accordion/> },
-    { id: '3', title: 'Technology', content: <Accordion/> },
-    { id: '4', title: 'Your Account', content: <Accordion/> },
-  ];
+  const Faqdata = 
+    [
+      {
+        id: "1",
+        title: "General Support",
+        descrip:
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum — semper quis lectus nulla. Interactively transform magnetic growth strategies whereas prospective “outside the box” thinking.",
+          image:fa1,
+          content: <FaqImg/> 
+      },
+      {
+        id: "2",
+        title: "Download / Install",
+        descrip:
+          "Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.",
+          image:fa2,
+          content: <FaqImg2/> 
+      },
+      {
+        id: "3",
+        title: "Technology",
+        descrip:
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum — semper quis lectus nulla. Interactively transform magnetic growth strategies whereas prospective “outside the box” thinking.",
+          image:fa1,
+          content: <FaqImg/> 
+      },
+      {
+        id: "4",
+        title: "Your Account",
+        descrip:
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum — semper quis lectus nulla. Interactively transform magnetic growth strategies whereas prospective “outside the box” thinking.",
+          image:fa2,
+          content: <FaqImg2/> 
+      },
+    ];
+    
 
-  const [activeTab, setActiveTab] = useState(0);
-
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-  };
-
+    const [openAccordionIndex, setOpenAccordionIndex] = useState(0);
+    const [activeTab, setActiveTab] = useState(0);
+    
+    const handleTabClick = (index) => {
+      setActiveTab(index);
+    };
+    
+    const toggleAccordion = (index) => {
+      if (openAccordionIndex === index) {
+        setOpenAccordionIndex(null);
+      } else {
+        setOpenAccordionIndex(index);
+      }
+    };
+    
+    const handleCombinedClick = (index) => {
+      toggleAccordion(index);
+      handleTabClick(index);
+    };
   return (
     <>
     <div className="bg-faq bg-no-repeat bg-right-top ">
@@ -35,31 +84,50 @@ const Faq = () => {
           <Para16 className={''} title={'Feeling inquisitive? Have a read through some of our FAQs or contact our supporters for help'}/>
           <Button text={'Learn More'} className={'bg-primary-white text-primary-black'} />
         </div>
-        <div className="sm:flex pt-10 md:gap-0 lg:gap-4 flex-wrap">
-          <div className="w-full sm:w-3/12">
-            {FaqTapdata.map((array, index) => (
-              <div
-                key={index}
-                onClick={() => handleTabClick(index)}
-                className={`${
-                  activeTab === index ? 'active bg-primary-blue300 text-primary-white' : ''
-                } flex justify-between cursor-pointer border p-3 mt-5 mb-5 font-medium rounded-md ${theme === 'dark' ? ' text-black hover:text-primary-white' : 'bg-primary-blue300 text-primary-white'} focus:bg-primary-blue300 hover:bg-primary-blue200`}
-              >
-                {array.title}
-                <BiRightArrowAlt size={25} />
-              </div>
-            ))}
-            <div className="flex flex-wrap gap-4">
-              <Button
-                text="Contact Us"
-                className="bg-primary-blue200 text-primary-white hover:border-blue200 hover:bg-primary-blue300 border-none"
-              />
-              <Button text="Support Center" className="bg-primary-white text-primary-black" />
+        <div className="flex pt-10 md:gap-0 lg:gap-4 flex-wrap sm:flex-nowrap">
+        <div className="w-full sm:w-5/12">
+          {Faqdata.map((array, index) => (
+        <div
+          className={`rounded-md ${
+            openAccordionIndex === index ? 'bg-primary-blue300' : ''
+          } mt-5 mb-5 transition duration-500 text-black`}
+          key={index}
+        >
+          
+          <button
+           onClick={() => handleCombinedClick(index)}
+            
+            className={`${
+              activeTab === index ? 'active  ' : ''
+            } w-full text-left p-3 rounded-md flex justify-between items-center ${
+              openAccordionIndex === index ? 'text-white' : `${theme === 'dark' ? ' text-black ' : ' text-primary-white'}`
+            }`}
+          >
+            <span className={`font-medium flex relative ${openAccordionIndex === index ? 'text-white' : ''}`}>
+            <FcFaq className='relative bottom-0 md:bottom-8 right-0 md:right-8 ' size={70}/> 
+            <HeadingH6 className={'relative right-0 md:right-6'} title={array.title}/>
+            </span>
+            <span>
+              {openAccordionIndex === index ? (
+                <MdOutlineKeyboardArrowUp size={25} className='text-primary-gray100' />
+              ) : (
+                <MdOutlineKeyboardArrowDown size={25} className='text-primary-gray300' />
+              )}
+            </span>
+          </button>
+          {openAccordionIndex === index && (
+            <div className="p-3">
+              <p className='text-primary-white'>{array.descrip}</p>
             </div>
+          )}
+        </div>
+      ))}
           </div>
-          <div className="w-full sm:w-8/12">
-          {FaqTapdata[activeTab].content}
+          <div className="w-full sm:w-7/12">
+          {Faqdata[activeTab].content}
+
           </div>
+          
         </div>
       </Container>
         

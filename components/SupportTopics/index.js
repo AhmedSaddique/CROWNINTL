@@ -3,17 +3,12 @@ import React from "react";
 import { HeadingH1, HeadingH5 } from "../Heading";
 import { Para16 } from "../Paragraph";
 import { useTheme } from "next-themes";
-import { HiDocumentDuplicate } from "react-icons/hi2";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import SwiperCore, { Pagination } from "swiper";
 import Button from "../Button";
 import { supportdata } from "../constants";
 
-// Install Swiper modules
-SwiperCore.use([Pagination]);
 
 const Topics = () => {
   const { theme, setTheme } = useTheme();

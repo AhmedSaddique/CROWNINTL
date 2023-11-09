@@ -39,7 +39,8 @@ const AboutCore = () => {
                   <Para16 className={'pl-2'} title={array.para} />
                 </div>
               </div>
-              <div className={`absolute opacity-0 w-full h-auto mt-10 mb-10 flex flex-col p-5 rounded-lg duration-500 transition group-hover:opacity-100 ${theme === 'dark' ? ' bg-primary-white ' : ' bg-primary-blue100 hover:bg-primary-blue200'}`}>
+              
+              <div className={`absolute opacity-0 w-full h-auto mt-10 mb-10 flex flex-col p-5 rounded-lg  group-hover:opacity-100 ${theme === 'dark' ? ' bg-primary-white ' : ' bg-primary-blue100 hover:bg-primary-blue200'}`}>
                 {array.item.map((items, index) => (
                   <div className='flex flex-col gap-3' key={index}>
                     <div className='flex'>

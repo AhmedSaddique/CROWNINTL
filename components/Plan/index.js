@@ -22,10 +22,10 @@ const Plan = () => {
   return (
     
     <div className=' w-full p-4 bg-finger bg-no-repeat shadow backdrop-blur-3xl'>
-      <div className='grid grid-cols-1 md:grid-cols-2 mb-3 '>
-        <div className=''>
+      <div className='grid grid-cols-1 mb-3 '>
+        <div className='text-center'>
           <HeadingH1 spanclass={'text-primary-blue100'} title={'Choose The Best '} title1={"Plan"}/>
-          <Para18 title={'Pick your plan.'}/>
+          <Para18 className={''} title={'Pick your plan.'}/>
           <Para18 title={'Change whenever you want.'}/>
         </div>
         <div className='flex justify-end items-end'>
@@ -37,8 +37,7 @@ const Plan = () => {
 
       <div className='gap-3 flex justify-center mb-10'>
         <HeadingH6 className={" mt-2"} title={"Monthly"}/>
-        <div className='border-4 p-1 rounded-xl hover:border-primary-blue100 duration-300 transition'>
-        <div className="relative  inline-block w-16 mt-1 select-none transition duration-400">
+        <div className="relative p-1  inline-block w-16 mt-1 select-none transition duration-400">
           <input
             type="checkbox"
             name="toggle"
@@ -52,7 +51,7 @@ const Plan = () => {
             className="toggle-label block overflow-hidden h-6 rounded-full bg-primary-blue200 cursor-pointer"
           ></label>
         </div>
-        </div>
+        
         
         <HeadingH6 className={" mt-2"} title={"Yearly"}/>
 

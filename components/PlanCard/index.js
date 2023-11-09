@@ -32,7 +32,9 @@ const PlanCard = (className) => {
                         <div>
                             <hr />
                         </div>
-                        <Button text={"Choose Plan"} className="w-full hover:scale-105 justify-center flex bg-primary-blue200 hover:bg-primary-blue300 border-none text-white" />
+                        <Button text={"Choose Plan"} className={`w-full hover:scale-105 justify-center flex ${
+                        theme === 'dark' ? 'bg-primary-blue200 hover:bg-primary-blue300 text-white' : 'bg-primary-white text-black'
+                      }  border-none `} />
 
                        {array.benefits.map((array, index)=>(
                         <>
