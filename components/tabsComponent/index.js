@@ -6,7 +6,7 @@ import { Para14, Para16 } from '../Paragraph'
 
 const TabsComponent = () => {
     return (
-        <div className='overflow-y-scroll xl:max-h-[400px] xxl:max-h-[550px]'>
+        <div className='overflow-y-scroll no-scrollbar xl:max-h-[400px] xxl:max-h-[550px]'>
         <HeadingH6 className={'text-white'} title={"Top Apps"} />
         <div className='grid grid-cols-2 sm:grid-cols-4 mt-5 mb-5 gap-4 p-2'>
         {

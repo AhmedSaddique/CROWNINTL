@@ -189,7 +189,7 @@ const Header = ({ className }) => {
               open={open}
               onClose={onClose}
               key={placement}
-              style={{ background: "transparent", boxShadow: "none !important", overflow: "hidden",}}
+              style={{ background: "transparent", boxShadow: "none !important", overflow: "hidden !important",}}
               >
               <div className={`rounded-lg shadow-xl  p-3 ${theme === 'dark' ? '  backdrop-blur-2xl' : ' backdrop-blur-2xl '
         }`}>
