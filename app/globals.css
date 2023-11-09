@@ -30,9 +30,6 @@
     font-weight: 600;
   }
 
-  :where(.css-dev-only-do-not-override-xu9wm8).ant-drawer-left>.ant-drawer-content-wrapper{
-    box-shadow: none !important;
-  }
 
   .toggle-checkbox:checked {
     @apply: right-0 border-green-400;
@@ -44,14 +41,14 @@
 
   }
   
-  :where(.css-dev-only-do-not-override-xu9wm8).ant-drawer-left>.ant-drawer-content-wrapper{
-    box-shadow: none !important;
-  }
 
 .bg-g-blue{
   background: radial-gradient(circle, rgba(59,41,102,1) 0%, rgba(10,11,53,1) 24%, rgba(10,11,53,1) 97%);
 }
 
+.ant-drawer-left>.ant-drawer-content-wrapper{
+box-shadow: none !important;
+}
 
 :root {
   --color-bg1: #121468;
