@@ -17,6 +17,7 @@ import Button from '../Button';
 import TabsComponent from '../tabsComponent';
 import { ImCross } from 'react-icons/im';
 import { BiLogoGmail } from 'react-icons/bi';
+import { BsTelephone, BsTelephoneFill } from 'react-icons/bs';
 
 
 const Header = ({ className }) => {
@@ -109,7 +110,7 @@ const Header = ({ className }) => {
       info@crownintltechnology.com
     </p>
     <p className='text-14 flex ap-2'>
-      <HiOutlineDevicePhoneMobile size={20}/>
+      <BsTelephoneFill size={20}/>
       +92 328 0143786
     </p>
   </div>
@@ -137,16 +138,17 @@ const Header = ({ className }) => {
             <ThemeToggle />
             <Button onClick={() => toggleModal(0, true)} className={'border-none'} text={<AiOutlineSearch size={25}/>} />
             <Modal
+            centered
               open={isModalOpen[0]}
               onOk={() => toggleModal(0, false)}
               onCancel={() => toggleModal(0, false)}
               maskStyle={{ backdropFilter: 'blur(10px)' }}
-              
+              className='searchmodal'
               footer=""
              
             >
                <form  className="relative border-none mt-6 ">
-              <div>
+             
                 <div className="absolute inset-y-0 flex items-center  pl-3 pointer-events-none">
                   <svg
                     className="w-4 h-4 text-main"
@@ -177,7 +179,7 @@ const Header = ({ className }) => {
                 >
                   Search
                 </button>
-              </div>
+              
             </form>
             </Modal>
            
@@ -190,7 +192,8 @@ const Header = ({ className }) => {
               open={open}
               onClose={onClose}
               key={placement}
-              style={{ background: "transparent", boxShadow: "none !important", overflow: "hidden !important",}}
+              className='drawerbox'
+              style={{ background: "transparent", overflow: "hidden !important",}}
               >
               <div className={`rounded-lg shadow-xl  p-3 ${theme === 'dark' ? '  backdrop-blur-2xl' : ' backdrop-blur-2xl '
         }`}>

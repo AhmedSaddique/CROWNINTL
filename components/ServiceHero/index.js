@@ -46,10 +46,10 @@ const Hero = () => {
   const { theme, setTheme } = useTheme();
 
   const tabshow = [
-    {id:"1", href:'#Service', title: 'Service'},
-    {id:"2", href:'#Media', title: 'Media content' },
-    {id:"3", href:'#Plan', title: 'Plan' },
-    {id:"4", href:'#Faq', title: "Faq's" },
+    {id:"1", href:'#service', title: 'Service'},
+    {id:"2", href:'#media', title: 'Media content' },
+    {id:"3", href:'#plan', title: 'Plan' },
+    {id:"4", href:'#faq', title: "Faq's" },
   ];
   const tablink = [
     {id:"1", href:'/policy', title: 'Privacy Policy', icon:<SiGnuprivacyguard size={20}/>,},
@@ -151,7 +151,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div id="Media">
+          <div id="media">
           <HeadingH3 title={'Media content storage and delivery'}/>
           <Tabs defaultActiveKey="1"  tabBarStyle={{ border: 'none' }} className={``}>
             <TabPane  tab={<span className={`flex gap-1 ${
@@ -196,10 +196,10 @@ const Hero = () => {
           </Tabs>
           </div>
 
-          <div id="Plan" className='mt-5'>
+          <div id="plan" className='mt-5'>
               <Plan/>
           </div>
-          <div id="Faq" className='mt-5'>
+          <div id="faq" className='mt-5'>
               <Faq/>
           </div>
         </div>

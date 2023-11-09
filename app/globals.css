@@ -49,7 +49,9 @@
 .ant-drawer-left>.ant-drawer-content-wrapper{
 box-shadow: none !important;
 }
-
+.searchmodal.ant-modal .ant-modal-content{
+  padding: 18px 10px 4px 10px !important;
+}
 :root {
   --color-bg1: #121468;
   --color-bg2: #0A0B35;
