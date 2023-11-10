@@ -487,76 +487,13 @@ export const Contactdata = [
   },
 ];
 export const tabdata = [
-  { id: "1", image: gmail, title: "Gmail" },
-  { id: "2", image: discord, title: "Discored" },
-  { id: "3", image: slack, title: "Slack" },
-  { id: "1", image: gmail, title: "Gmail" },
-  { id: "2", image: discord, title: "Discored" },
-  { id: "3", image: slack, title: "Slack" },
+  { id: "1", image: gmail, title: "Gmail", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
+  { id: "2", image: discord, title: "Discored", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
+  { id: "3", image: slack, title: "Slack", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
+  { id: "1", image: gmail, title: "Gmail", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
+  { id: "2", image: discord, title: "Discored", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
+  { id: "3", image: slack, title: "Slack", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
 ];
-export const Recommendeddata = [
-  {
-    id: "1",
-    image: gmail,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "2",
-    image: discord,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "3",
-    image: slack,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "1",
-    image: gmail,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "2",
-    image: discord,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "3",
-    image: slack,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "3",
-    image: slack,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "1",
-    image: gmail,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "2",
-    image: discord,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-  {
-    id: "3",
-    image: slack,
-    title: "Virtual Service",
-    para: "Flexible Virtual Service",
-  },
-];
-
 
 export const policydata=[
   {id:"" , href:"",hrefid:"" , title:"" ,text:""},

@@ -41,7 +41,7 @@ const Testimonial = () => {
 
   return (
     <Container className={"pt-10"}>
-      <div className={` space-y-5 bg-plant bg-no-repeat bg-left-bottom`}>
+      <div className={` space-y-5 bg-testi bg-no-repeat bg-left-bottom`}>
       <HeadingH2 className={''} title={"What our customers are saying"} />
       <div className='flex justify-between flex-wrap '>
         <Para16 title={`Hear from our users who have saved thousands on their Startup and SaaS solution spend`} />

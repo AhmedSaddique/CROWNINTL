@@ -70,6 +70,8 @@ module.exports = {
         'Hero' :"url('/assets/images/Hero.png')",
         'policyright' :"url('/assets/images/policy-right.png')",
         'policyleft' :"url('/assets/images/policy-left.png')",
+        'testi' :"url('/assets/images/testi.png')",
+
 
 
 

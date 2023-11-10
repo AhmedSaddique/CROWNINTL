@@ -3,6 +3,7 @@ import { HeadingH6 } from '../Heading'
 import Image from 'next/image'
 import { Recommendeddata, tabdata } from '../constants'
 import { Para14, Para16 } from '../Paragraph'
+import Link from 'next/link'
 
 const TabsComponent = () => {
     return (
@@ -11,10 +12,10 @@ const TabsComponent = () => {
         <div className='grid grid-cols-2 sm:grid-cols-4 mt-5 mb-5 gap-4 p-2'>
         {
             tabdata.map((array, index)=>(
-                <div key={index} className=' bg-primary-white hover:bg-primary-light hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md '>
+                <Link href='/product' key={index} className=' bg-primary-white hover:bg-primary-light hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md '>
                 <Image className='w-[50px] mx-auto' src={array.image} alt={array.image} />
                 <HeadingH6 className={'text-primary-black'} title={array.title}/>
-               </div>
+               </Link>
             ))
         }
         </div>
@@ -22,14 +23,14 @@ const TabsComponent = () => {
         <HeadingH6 className={'text-white'} title={"Recommended"}/>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5 p-2'>
         {
-            Recommendeddata.map((array,index)=>(
-                <div key={index} className='bg-primary-white hover:bg-primary-light hover:scale-105 flex items-center transition duration-300 gap-2 p-3 shadow-lg text-primary-white rounded-md'>
+            tabdata.map((array,index)=>(
+                <Link href="/product" key={index} className='bg-primary-white hover:bg-primary-light hover:scale-105 flex items-center transition duration-300 gap-2 p-3 shadow-lg text-primary-white rounded-md'>
                 <Image className='w-[50px]' src={array.image} alt={array.image}/>
                 <div className='text-primary-black'>
                     <HeadingH6 title={array.title}/>
-                    <Para14 title={array.para}/>
+                    <Para14 title={array.text}/>
                 </div>
-                </div>
+                </Link>
             ))
         }
        

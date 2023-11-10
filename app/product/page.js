@@ -1,8 +1,12 @@
+import LayoutProvider from '@/components/LayoutProvider'
+import ProductHero from '@/components/Product'
 import React from 'react'
 
 const Product = () => {
   return (
-    <div>Product</div>
+    <LayoutProvider>
+      <ProductHero/>
+    </LayoutProvider>
   )
 }
 

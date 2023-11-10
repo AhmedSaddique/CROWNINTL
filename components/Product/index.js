@@ -1,5 +1,6 @@
+"use client"
 import { useState, useEffect } from 'react';
-import { HeadingH1, HeadingH3, HeadingH4, HeadingH6 } from '../Heading';
+import { HeadingH1, HeadingH2, HeadingH3, HeadingH4, HeadingH6 } from '../Heading';
 import { Para14, Para16, Para18 } from '../Paragraph';
 import { useTheme } from 'next-themes';
 import { Anchor ,Tabs  } from 'antd';
@@ -12,11 +13,13 @@ import { BiSolidContact } from 'react-icons/bi';
 import { RiCloseLine, RiMenu4Line } from 'react-icons/ri';
 import Plan from '../Plan';
 import Faq from '../Faq';
+import { tabdata } from '../constants';
+import Image from 'next/image';
 const { TabPane } = Tabs;
 
 const { Link } = Anchor;
 
-const Hero = () => {
+const ProductHero = () => {
 
   const [showCard, setShowCard] = useState(true);
 
@@ -46,10 +49,8 @@ const Hero = () => {
   const { theme, setTheme } = useTheme();
 
   const tabshow = [
-    {id:"1", href:'#service', title: 'Service'},
-    {id:"2", href:'#media', title: 'Media content' },
-    {id:"3", href:'#plan', title: 'Plan' },
-    {id:"4", href:'#faq', title: "Faq's" },
+    {id:"1", href:'#product', title: 'Product'},
+    {id:"2", href:'#all', title: 'All' },
   ];
   const tablink = [
     {id:"1", href:'/policy', title: 'Privacy Policy', icon:<SiGnuprivacyguard size={20}/>,},
@@ -133,10 +134,10 @@ const Hero = () => {
         <div className={`p-1 md:p-3 space-y-10 ${
                 theme === 'dark' ? 'text-primary-black' : 'text-primary-white'
               }  `}>
-          <div id="service">
+          <div id="product">
             <div className={`pt-5 w-full `}>
               <div className='space-y-4 '>
-                <Para18 className={'font-bold text-justify'} title={"________ Service"} />
+                <Para18 className={'font-bold text-justify'} title={"________ PRODUCT"} />
                 <div className='-space-y-3'>
                   <HeadingH1 title={"Advanced analytics to grow "} />
                   <HeadingH1 title={"your business"} />
@@ -150,38 +151,25 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div id="media">
-          <HeadingH3 title={'Media content storage and delivery'}/>
-          <Tabs defaultActiveKey="1"  tabBarStyle={{ border: 'none' }} className={``}>
-            <TabPane  tab={<span className={`flex gap-1 ${
-                theme === 'dark' ? 'text-primary-black' : 'text-primary-white'
-              }`}><AiOutlineHome  size={20} className='mt-1'/> Tab1</span>} key="1">
-              <div className={`space-y-3 ${
-                theme === 'dark' ? 'text-primary-black' : 'text-primary-white'
-              }`}>
-                <HeadingH4 title={'Store data to stream audio or video'} />
-                <Para16 title={'Stream audio or video directly to apps or websites with Cloud Storage’s geo-redundant capabilities. Geo-redundant storage with the highest level of availability and performance is ideal for low-latency, high-QPS content serving to users distributed across geographic regions.'}/>
 
-                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 pt-5'>
-                  <div className='border-t-2 p-2 shadow-md backdrop-blur-3xl'>
-                    <Para14 title={'high-QPS content serving to users distributed across geographic regions'}/>
-                  </div>
-                  <div className='border-t-2 p-2 shadow-md backdrop-blur-3xl'>
-                    <Para14 title={'high-QPS content serving to users distributed across geographic regions'}/>
-                  </div>
-                </div>
-              </div>
-            </TabPane>
+          <div id="all" className='mt-5 space-y-4'>
+            <HeadingH3 title={'All Product'}/>
+
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 '>
+            {
+            tabdata.map((array, index)=>(
+                <NextLink href='/product' key={index} className={`${
+                    theme === 'dark' ? 'text-primary-black hover:bg-primary-light' : 'text-primary-white hover:bg-primary-blue100 '
+                  } space-y-2 shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}>
+                <Image className='w-[50px] mx-auto' src={array.image} alt={array.image} />
+                <HeadingH6  title={array.title}/>
+                <Para14 title={array.text}/>
+               </NextLink>
+            ))
+        }
+            </div>
+          </div>
           
-          </Tabs>
-          </div>
-
-          <div id="plan" className='mt-5'>
-              <Plan/>
-          </div>
-          <div id="faq" className='mt-5'>
-              <Faq/>
-          </div>
         </div>
         </Container>
       </div>
@@ -189,4 +177,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default ProductHero;

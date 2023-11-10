@@ -8,7 +8,6 @@ import { TbMenu2 } from 'react-icons/tb';
 import { AiOutlineSearch } from 'react-icons/ai';
 import {HiOutlineBars3BottomRight, HiOutlineDevicePhoneMobile} from 'react-icons/hi2';
 import { Modal } from 'antd';
-
 import ThemeToggle from '../toggletheme';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
@@ -182,8 +181,6 @@ const Header = ({ className }) => {
               
             </form>
             </Modal>
-           
-            
             <Button className={'border-none'} onClick={showDrawer} btnicon={<HiOutlineBars3BottomRight size={25} />} text='' />
             <Drawer
               width={700}
@@ -201,6 +198,7 @@ const Header = ({ className }) => {
                   <ImCross />
                 </div>
                 <div>
+
                 <Tabs className='drawerTab mt-5' defaultActiveKey="1" items={items} onChange={onChangeTab} />
 
                 </div>
