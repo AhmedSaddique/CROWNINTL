@@ -4,9 +4,10 @@ import { HeadingH1 } from '../Heading'
 import { Para14 } from '../Paragraph'
 import { InputForm } from '../Input'
 import Button from '../Button'
-import { AiFillEye, AiFillIdcard, AiOutlineCheck, AiOutlineMail, AiOutlinePhone, AiOutlineUser } from 'react-icons/ai'
+import { AiFillEye, AiFillGithub, AiFillIdcard, AiOutlineCheck, AiOutlineMail, AiOutlinePhone, AiOutlineUser } from 'react-icons/ai'
 import Link from 'next/link'
 import Container from '../Container'
+import { FcGoogle } from 'react-icons/fc'
 
 const SignUp = () => {
   const [password, setPassword] = useState('');
@@ -57,9 +58,9 @@ const SignUp = () => {
         </div>
         <Button className={"border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md"} text={"Sign Up"}/>
          <div className='flex'>
-        <b >Alrady have a account ! <span className='border-b border-primary-gray400' ><Link href="/login">Login</Link></span></b>
-
+        <b>Alrady have a account ! <span className='border-b border-primary-gray400' ><Link href="/login">Login</Link></span></b>
         </div>
+        
         </div>
     </div>
     </Container>

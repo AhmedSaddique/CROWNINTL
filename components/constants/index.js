@@ -487,12 +487,12 @@ export const Contactdata = [
   },
 ];
 export const tabdata = [
-  { id: "1", image: gmail, title: "Gmail", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
-  { id: "2", image: discord, title: "Discored", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
-  { id: "3", image: slack, title: "Slack", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
-  { id: "1", image: gmail, title: "Gmail", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
-  { id: "2", image: discord, title: "Discored", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
-  { id: "3", image: slack, title: "Slack", text:"Collaborate, plan projects and manage resources with powerful features that your whole team can use." },
+  { id: "1", image: gmail, title: "Gmail", text:"Collaborate, plan projects and manage Collaborate, plan" },
+  { id: "2", image: discord, title: "Discored", text:"Collaborate, plan projects and manage Collaborate, plan" },
+  { id: "3", image: slack, title: "Slack", text:"Collaborate, plan projects and manage Collaborate, plan" },
+  { id: "1", image: gmail, title: "Gmail", text:"Collaborate, plan projects and manage Collaborate, plan" },
+  { id: "2", image: discord, title: "Discored", text:"Collaborate, plan projects and manage Collaborate, plan" },
+  { id: "3", image: slack, title: "Slack", text:"Collaborate, plan projects and manage Collaborate, plan" },
 ];
 
 export const policydata=[

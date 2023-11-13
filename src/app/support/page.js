@@ -4,7 +4,7 @@ import Hero from '@/components/SupportHero'
 import Topics from '@/components/SupportTopics'
 import React from 'react'
 import { BsArrowRightShort } from 'react-icons/bs'
-import support from '../../public/assets/images/support.jpg'
+import support from '../../../public/assets/images/support.jpg'
 import Blog from '@/components/Blog'
 
 

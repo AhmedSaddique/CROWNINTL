@@ -7,8 +7,9 @@ import AboutCore from '@/components/AboutCore'
 import Container from '@/components/Container'
 import Brand from '@/components/Brand'
 import Information from '@/components/Information'
-import imagevideo from '../public/assets/images/imgvideo.png'
+import imagevideo from '../../public/assets/images/imgvideo.png'
 import { DiGoogleCloudPlatform } from 'react-icons/di'
+import { useSession } from 'next-auth/react'
 
 
 export default function Home() {

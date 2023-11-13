@@ -23,7 +23,8 @@ module.exports = {
       animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'bounce': 'bounce 3s linear infinite',
-        'bounceRight': 'bounce 3s linear infinite'
+        'bounceRight': 'bounce 3s linear infinite',
+        'scrollX': 'scrollX 30s linear infinite',
       },
       backdropFilter: {
         'none': 'none',
@@ -35,7 +36,14 @@ module.exports = {
           '0%, 100%': { transform: 'translateX(0)' },
           '50%': {transform: 'translateX(100%)' },
         },
-
+        scrollX: {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(-100%)',
+          },
+        },
         bounceRight: {
           '0%, 100%': { transform: 'translateX(0)' },
           '50%': {transform: 'translateX(20px)' },

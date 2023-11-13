@@ -51,6 +51,8 @@ const ProductHero = () => {
   const tabshow = [
     {id:"1", href:'#product', title: 'Product'},
     {id:"2", href:'#all', title: 'All' },
+    {id:"2", href:'#reco', title: 'Recommended' },
+
   ];
   const tablink = [
     {id:"1", href:'/policy', title: 'Privacy Policy', icon:<SiGnuprivacyguard size={20}/>,},
@@ -154,6 +156,25 @@ const ProductHero = () => {
 
           <div id="all" className='mt-5 space-y-4'>
             <HeadingH3 title={'All Product'}/>
+
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 '>
+            {
+            tabdata.map((array, index)=>(
+                <NextLink href='/product' key={index} className={`${
+                    theme === 'dark' ? 'text-primary-black hover:bg-primary-light' : 'text-primary-white hover:bg-primary-blue100 '
+                  } space-y-2 shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}>
+                <Image className='w-[50px] mx-auto' src={array.image} alt={array.image} />
+                <HeadingH6  title={array.title}/>
+                <Para14 title={array.text}/>
+               </NextLink>
+            ))
+        }
+            </div>
+          </div>
+
+
+          <div id="reco" className='mt-5 space-y-4'>
+            <HeadingH3 title={'Recommend'}/>
 
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 '>
             {

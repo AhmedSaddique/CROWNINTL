@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export const InputForm = ({type="type" ,placeholder ,InputIcon}) => {
+export const InputForm = ({type="text" ,placeholder ,InputIcon}) => {
   return (
     <div className='pb-3'>
       <div className="flex items-center rounded-lg  border px-3 hover:border-primary-gray200 duration-300 transition focus:outline-primary-gray200">

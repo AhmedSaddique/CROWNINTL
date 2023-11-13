@@ -141,7 +141,7 @@ const Header = ({ className }) => {
               open={isModalOpen[0]}
               onOk={() => toggleModal(0, false)}
               onCancel={() => toggleModal(0, false)}
-              maskStyle={{ backdropFilter: 'blur(10px)' }}
+              maskStyle={{ backdropFilter: 'blur(10px)' }} 
               className='searchmodal'
               footer=""
              
